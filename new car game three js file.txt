@@ -33,21 +33,21 @@ function getDistance(coordinate1, coordinate2) {
 }
 
 const vehicleColors = [
-  0xff0404,
-  0xff0404,
-  0xff0404,
-  0xa52523/*0xa52523*/
+  0xa52523,
+  0xef2d56,
+  0x0ad3ff,
+  0xff9f1c /*0xa52523, 0xbdb638, 0x78b14b*/
 ];
 
-const lawnGreen = "#67C240";
-const trackColor = "#6bffd7";
-const edgeColor = "#88888";
+const lawnGreen = "#5cerfd7";
+const trackColor = "#888888";
+const edgeColor = "#725F48";
 const treeCrownColor = 0x498c2c;
 const treeTrunkColor = 0x4b3f2f;
 
-const wheelGeometry = new THREE.BoxBufferGeometry(14, 36, 14);
+const wheelGeometry = new THREE.BoxBufferGeometry(12, 33, 12);
 const wheelMaterial = new THREE.MeshLambertMaterial({ color: 0x333333 });
-const treeTrunkGeometry = new THREE.BoxBufferGeometry(18, 18, 36);
+const treeTrunkGeometry = new THREE.BoxBufferGeometry(15, 15, 30);
 const treeTrunkMaterial = new THREE.MeshLambertMaterial({
   color: treeTrunkColor
 });
@@ -123,7 +123,7 @@ const camera = new THREE.OrthographicCamera(
   700 // far plane
 );
 
-camera.position.set(6, -300, 110);
+camera.position.set(5, -210, 300);
 camera.lookAt(0, 0, 0);
 
 const scene = new THREE.Scene();
